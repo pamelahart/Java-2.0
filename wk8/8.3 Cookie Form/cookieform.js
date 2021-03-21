@@ -44,12 +44,12 @@ let vm = new Vue({
     },
     methods: {
         submitHandler: () => {
-            console.log('submitted');
-            vm.cookies = vm.cookies.concat(vm.newCookieObj);
+            cookie.log('submitted');
+            vm.cookies = vm.cookies.concat(vm.newCookiesObj);
             vm.resetForm();
     },
     resetForm: () => {
-        vm.newCookieObj = {
+        vm.newCookiesObj = {
             image: '',
             name: '',
             time: '',
@@ -64,31 +64,4 @@ let vm = new Vue({
     }
 }
 })
-            /* },
-            methods: { 
-                    submitHandler: () => {
-                        console.log('submitted');
-            } */
 
-
-// Things to Do:
-/* 
-1. My images for the cookies are aligned atop one another. I know this must be happening due to naming- I've included a chocolate chip cookie as part of the background and I think its picking up that- 
-Trying to create a proper class of the big cookie. Not having luck searching W3 schools to find the proper answer
-
-
-What are mustaches???? same as curly brackets? why are they now called this? */
-/* function setup() {
-    createCanvas(1000, 1000); // make smaller
-
-    background('#ffffcc');
-/*     fill('#141b30'); */
-/* draw() */
-
-/* back to basics:
-String = zero or more characters written inside quotes.
-Array = used to store multiple values in a single variable.
-var x, y, z;       // Declare Variables
-x = 5; y = 6;      // Assign Values
-z = x + y;         // Compute Values
-*/
