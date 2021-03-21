@@ -58,10 +58,9 @@ let vm = new Vue({
         };
     },
     deleteItem: item => {
-        vm.cookies = vm.cookies.filter(cookies =>{
+        vm.cookies = vm.cookies.filter(cookies => {
             return cookies !== item;
         })
     }
-}
+        }
 })
-
