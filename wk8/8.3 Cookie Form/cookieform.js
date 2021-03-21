@@ -45,11 +45,11 @@ let vm = new Vue({
     methods: {
         submitHandler: () => {
             cookie.log('submitted');
-            vm.cookies = vm.cookies.concat(vm.newCookiesObj);
+            vm.cookies = vm.cookies.concat(vm.newCookieObj);
             vm.resetForm();
     },
     resetForm: () => {
-        vm.newCookiesObj = {
+        vm.newCookieObj = {
             image: '',
             name: '',
             time: '',
