@@ -44,7 +44,7 @@ let vm = new Vue({
     },
     methods: {
         submitHandler: () => {
-            cookie.log('submitted');
+            console.log('submitted');
             vm.cookies = vm.cookies.concat(vm.newCookieObj);
             vm.resetForm();
     },
