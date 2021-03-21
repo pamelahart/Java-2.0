@@ -1,7 +1,7 @@
 let vm = new Vue({
     el: "#myCookieApp",
     data: {
-        newConsoleObj: {
+        newCookieObj: {
             image: '',
             name: '',
             time: '',
@@ -45,11 +45,11 @@ let vm = new Vue({
     methods: {
         submitHandler: () => {
             console.log('submitted');
-            vm.cookies = vm.cookies.concat(vm.newConsoleObj);
+            vm.cookies = vm.cookies.concat(vm.newCookieObj);
             vm.resetForm();
     },
     resetForm: () => {
-        vm.newConsoleObj = {
+        vm.newCookieObj = {
             image: '',
             name: '',
             time: '',
@@ -58,8 +58,8 @@ let vm = new Vue({
         };
     },
     deleteItem: item => {
-        vm.cookies = vm.cookies.filter(cookie =>{
-            return cookie !== item;
+        vm.cookies = vm.cookies.filter(cookies =>{
+            return cookies !== item;
         })
     }
 }

@@ -34,7 +34,7 @@
             <td>{{cookie.time}}</td>
             <td>{{cookie.yields}}</td>
             <td><a v-bind:href="cookie.recipe">Get the Recipe!</a></td>
-            <td><button type="button" v-on:click="deleteItem(cookies)">"Delete"</button></td>
+            <td><button type="button" v-on:click="deleteItem(cookies)">Delete</button></td>
           
           
           </tr>
@@ -49,31 +49,31 @@
         <div>
           <label for="image">Cookie</label>
           <input id="image" type="text" 
-          v-model="newConsoleObj.image">
+          v-model="newCookieObj.image">
         </div>
         
           <div>
             <label for="name">Name</label>
             <input id="name" type="text"
-            v-model="newConsoleObj.name">
+            v-model="newCookieObj.name">
           </div>
 
           <div>
             <label for="time">Time</label>
             <input id="time" type="text" 
-            v-model="newConsoleObj.time">
+            v-model="newCookieObj.time">
           </div>
            
           <div>
             <label for="yields">Yields</label>
             <input id="yields" type="text" 
-            v-model="newConsoleObj.yields">
+            v-model="newCookieObj.yields">
           </div>
 
           <div>
             <label for="recipe">Recipe</label>
             <input id="recipe" type="recipe" 
-            v-model="newConsoleObj.recipe">
+            v-model="newCookieObj.recipe">
           </div>
 
           <button id="submit">SUBMIT</button>
