@@ -4,11 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Llama Computed</title>
+    <link rel="stylesheet" href="Llama9.2.css">
 </head>
 <body>
-    <H1>Llama Computed</H1>
-    <div>
-        <big-boy></big-boy>
+     <h1>Camelid components</h1>
+    <div id="app">
+     <div class="animal-container" v-cloak>
+                <h3 class="common-name">{{camelids[0].commonName}}</h3>
+                <div class="image"><img v-bind:src="camelids[0].image" alt="camelids[0].common-name" /></div>
+                <div>Bionomial name: {{camelids[0].binomialName}}</div>
+                <div>Order: {{camelids[0].order}}</div>
+                <div class="family">Family: {{camelids[0].family}}</div>
+                <div>Genus: {{camelids[0].genus}}</div>
+            </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="Llama9.2.js"></script>
 </body>
 </html>

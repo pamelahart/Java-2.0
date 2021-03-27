@@ -1,8 +1,8 @@
-VTTCue.component('big-boy',{
+Vue.component('big-boy', {
 template: <div>Hi, Big Boy</div>
 )};
 
-const vm = new VTTCue({
+const vm = new vue({
     el: "#myApp",
     data: {
         address1: "123 Easy Street",
