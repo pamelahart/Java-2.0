@@ -35,6 +35,7 @@
             <td>{{cookie.yields}}</td>
             <td><a v-bind:href="cookie.recipe">Get the Recipe!</a></td>
             <td><button type="button" v-on:click="deleteItem(cookie)">Delete</button></td>
+<!--             <button type="button" v-on:click="deleteItem(cookie)">Delete</button> -->
           
           
           </tr>
@@ -86,4 +87,7 @@
 </body>
 
 </html>
+<!-- Looks like your form is not inside the div that the Vue instance is targeting so the form isn't going to work. And the button is passing the whole cookie array instead of just one cookie on the delete event. It should look like this (note the pluralization):
 
+<button type="button" v-on:click="deleteItem(cookie)">Delete</button>
+ -->
