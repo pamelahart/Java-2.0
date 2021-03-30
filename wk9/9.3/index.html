@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Order Form</title>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto&display=swap" rel="stylesheet">
-    <link href="cookieform.css" rel="stylesheet" />
+    <link href="cookieform93.css" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
@@ -83,21 +83,26 @@
       </form>
     </div>
   
-  <script src="cookieform.js"></script>
+  <script src="cookieform93.js"></script>
 </body>
 
 </html>
 <!-- Looks like your form is not inside the div that the Vue instance is targeting so the form isn't going to work. And the button is passing the whole cookie array instead of just one cookie on the delete event. It should look like this (note the pluralization):
 
 <button type="button" v-on:click="deleteItem(cookie)">Delete</button>
+Pretty sure I fixed this w/ Alex, but the MCAD assignment link may not have updated ....
+Github was updated... 
 
 INSTRUCTIONS
 Convert "row" element into a component.
 
-In your last assignment, you modified your collection app to allow you to add and delete items. This week, we will optimize it by converting the repeated element into a component. Use a single object property or multiple properties to pass the data from your objects in the array into the new component.
+In your last assignment, you modified your collection app to allow you to add and delete items. 
+
+This week, we will optimize it by converting the repeated element into a component. Use a single object property or multiple properties to pass the data from your objects in the array into the new component.
 
 Do not include the delete button! We will discus possible solutions for communicating between parent and child components next week.
 
-Please note! If your repeated element is a TR tag, Vue may throw an error if you try to nest your component in a table. In this situation (as well as with LI tags), you should use the appropriate tag and then use the is attribute. For example, if you component was called <my-light>, and I used a TR tag as my repeating element, I was use <tr
-        is="my-light">.
+Please note! If your repeated element is a TR tag, Vue may throw an error if you try to nest your component in a table. In this situation (as well as with LI tags), you should use the appropriate tag and then use the is attribute. 
+
+For example, if you component was called <my-light>, and I used a TR tag as my repeating element, I would use <tr is="my-light">.
  -->
