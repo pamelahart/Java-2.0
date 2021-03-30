@@ -1,3 +1,12 @@
+Vue.component('cookie-container', {
+    template: '<div>cookienames</div>',
+    data: function () {
+        return {
+            name: 'test this'
+        }
+    }
+});
+
 let vm = new Vue({
     el: "#myCookieApp",
     data: {

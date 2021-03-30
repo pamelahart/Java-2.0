@@ -87,6 +87,21 @@
 </body>
 
 </html>
+
+<!-- <h1>Camelid Components</h1>
+<div id="app">
+  <div class="animal-container" v-cloak>
+    <h3 class="common-name">{{camelids[0].commonName}}</h3>
+    <div class="image"><img v-bind:src="camelids[0].image" alt="camelids[0].common-name" /></div>
+    <div>Bionomial name: {{camelids[0].binomialName}}</div>
+    <div>Order: {{camelids[0].order}}</div>
+    <div class="family">Family: {{camelids[0].family}}</div>
+    <div>Genus: {{camelids[0].genus}}</div>
+  </div>
+</div> -->
+
+
+
 <!-- Looks like your form is not inside the div that the Vue instance is targeting so the form isn't going to work. And the button is passing the whole cookie array instead of just one cookie on the delete event. It should look like this (note the pluralization):
 
 <button type="button" v-on:click="deleteItem(cookie)">Delete</button>
