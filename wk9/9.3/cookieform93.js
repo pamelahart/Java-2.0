@@ -1,5 +1,5 @@
-Vue.component('cookie-container', {
-    template: '<div>cookienames</div>',
+Vue.component('cookie-chart', {
+    template: '<div>cookiechart</div>',
     data: function () {
         return {
             name: 'test this'
