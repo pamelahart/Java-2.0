@@ -1,5 +1,5 @@
 Vue.component('cookie-chart', {
-    template: '<div>cookiechart</div>',
+    template: '<div><h3>((cookiechart))/<h3></div>', 
     data: function () {
         return {
             name: 'test this'
