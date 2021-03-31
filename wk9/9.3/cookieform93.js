@@ -1,8 +1,14 @@
 Vue.component('cookie-chart', {
-    template: '<div><h3>((cookiechart))/<h3></div>', 
+    template: ' <div><h3>((name))/<h3></div><img v-bind:src="image" v-bind:alt="name" ?></div>, 
+
+
     data: function () {
         return {
-            name: 'test this'
+            image: 'cookie6.jpg',
+            name: 'Spice',
+            time: '1.5 hours',
+            yields: '30',
+            recipe: false
         }
     }
 });
