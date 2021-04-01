@@ -1,10 +1,10 @@
 Vue.component('cookie-chart', {
     template:  ` <div>
-    <h3>{{hello}}<h3>
-        <div> 
-             <img v-bind:src="image" v-bind:alt="name" />
-        </div> 
-        <p>time: {{time}}<br>yields: {{yields}}
+                    <h3>{{name}}<h3>
+                    <div> 
+                        <img v-bind:src="image" v-bind:alt="name" /> 
+                    </div> 
+        <p>time: {{time}}<br>yields: {{yields}}<recipe: {{recipe}}
         </div> `,
 
  /*    data: function () {
