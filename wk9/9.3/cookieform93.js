@@ -16,12 +16,12 @@ Vue.component('cookie-chart', {
             recipe: false
         }
     } */
-    props: [ ]
-    'image',
-    'name',
-    'time',
-    'yields',
-    'recipe',
+    props: 
+        ['image']
+        ['name'],
+        ['time'],
+        ['yields'],
+        ['recipe'],
 });
 
 let vm = new Vue({
