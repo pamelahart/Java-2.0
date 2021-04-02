@@ -17,7 +17,15 @@
    
     <div id="myCookieApp">
       <div class="#myCookieApp" v-cloak></div>
-      <cookie-chart></cookie-chart>
+      <cookie-chart v-for="(cookie,index) in cookies"
+         v-bind:image="cookie.image"
+          v-bind:name="cookie.name"
+          v-bind:time="cookie.time"
+         v-bind:yields="cookie.yields"
+         v-bind:recipe="cookie.recipe"
+      v-bind:key="index"
+      
+      ></cookie-chart>
       <time></time>
 
 <!--        Vue.component('cookie-chart', {
@@ -69,7 +77,7 @@
       <!-- </table> -->
 
 
-    </div> 
+    
 
     <div>
       <form v-on:submit.prevent="submitHandler">
@@ -110,7 +118,8 @@
         </fieldset>
       </form>
     </div>
-  
+  </div>
+
   <script src="cookieform93.js"></script>
 </body>
 

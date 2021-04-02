@@ -1,27 +1,18 @@
 Vue.component('cookie-chart', {
     template:  ` <div>
-                    <h3>{{name}}<h3>
+                    <h3>{{name}}</h3>
                     <div> 
                         <img v-bind:src="image" v-bind:alt="name" /> 
                     </div> 
-        <p>time: {{time}}<br>yields: {{yields}}<recipe: {{recipe}}
-        </div> `,
+        <p>time: {{time}}<br>yields: {{yields}}<recipe: {{recipe}}</p>,
+        </div> ` ,
 
- /*    data: function () {
-        return {
-            image: 'cookie6.jpg',
-            name: 'Spice',
-            time: '1.5 hours',
-            yields: '30',
-            recipe: false
-        }
-    } */
     props: 
-        ['image']
-        ['name'],
-        ['time'],
-        ['yields'],
-        ['recipe'],
+        ['image',
+        'name',
+        'time',
+        'yields',
+        'recipe'],
 });
 
 let vm = new Vue({
