@@ -16,10 +16,9 @@ Vue.component('animal-container', {
             binomialName: 'Lama glama'
         } */
 
-const vm = new vue({
+const vm = new Vue({
 el: "#app",
     data: {
-        name1:
     camelids: [
         {
             commonName: "Lama",
@@ -40,7 +39,7 @@ el: "#app",
             image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alpaca_%2831562329701%29.jpg/440px-Alpaca_%2831562329701%29.jpg"
         },
     ]
-}
+
     },
     computed: {
         commonName: function() {
