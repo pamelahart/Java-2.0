@@ -19,11 +19,11 @@ let vm = new Vue({
     el: "#myCookieApp",
     data: {
         newCookieObj: {
-            image: '',
+            image: 'Add Cookie Image',
             name: '',
             time: '',
             yields: '',
-            recipe: false
+            recipe: 'Add Recipe'
     },
         cookies: [
             {

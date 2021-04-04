@@ -28,57 +28,6 @@
       ></cookie-chart>
       <time></time>
 
-<!--        Vue.component('cookie-chart', {
-    template:  ` <div>
-    <h3>{{hello}}<h3>
-        <div> 
-             <img v-bind:src="image" v-bind:alt="name" />
-        </div> 
-        <p>time: {{time}}<br>yields: {{yields}}
-        </div> `, -->
-
-      <!--
-      <div id="myCookieApp">
-        <div class="#myCookieApp" v-cloak>
-          <h3 class="common-name">{{cookiechart[0].commonName}}</h3>
-          <div class="image"><img v-bind:src="cookiechart[0].image" alt="cookiechart[0].common-name" /></div>
-          <div>Bionomial name: {{cookiechart[0].binomialName}}</div>
-          <div>Order: {{cookiechart[0].order}}</div>
-          <div class="family">Family: {{cookiechart[0].family}}</div>
-          <div>Genus: {{cookiechart[0].genus}}</div>
-        </div>
-      </div> -->
-
-
-      <!-- <table> -->
-        <!-- <thead>
-          <th>Cookie</th>
-          <th>Name</th>
-          <th>Time</th>
-          <th>Yields</th>
-          <th>Recipe</th>
-          <th>Actions</th>
-        </thead> 
-
-        <tbody>
-            <tr v-for="(cookie, idx) in cookies"
-            v-bind:class="{even: idx % 2 ===0}">
-            <td><img v-bind:src="cookie.image" v-bind:alt="cookie.name + '' + cookie.name" /></td>
-            <td>{{cookie.name}}</td>
-            <td>{{cookie.time}}</td>
-            <td>{{cookie.yields}}</td>
-            <td><a v-bind:href="cookie.recipe">Get the Recipe!</a></td>
-            <td><button type="button" v-on:click="deleteItem(cookie)">Delete</button></td>
-            <button type="button" v-on:click="deleteItem(cookie)">Delete</button>
-          
-          
-          </tr>
-        </tbody>  -->
-      <!-- </table> -->
-
-
-    
-
     <div>
       <form v-on:submit.prevent="submitHandler">
         <fieldset>
@@ -130,10 +79,6 @@
 
 
 <!-- Looks like your form is not inside the div that the Vue instance is targeting so the form isn't going to work. And the button is passing the whole cookie array instead of just one cookie on the delete event. It should look like this (note the pluralization):
-
-<button type="button" v-on:click="deleteItem(cookie)">Delete</button>
-Pretty sure I fixed this w/ Alex, but the MCAD assignment link may not have updated ....
-Github was updated... 
 
 INSTRUCTIONS
 Convert "row" element into a component.
