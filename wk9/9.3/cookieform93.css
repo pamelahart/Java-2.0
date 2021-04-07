@@ -8,21 +8,23 @@ h1 {
     color: #040474;
     font-family: 'Akaya Kanadaka', cursive;
     text-align: left;
-    font-size: 40px;
-    background-color: bisque;
-    padding-top: 1em;
+    font-size: 80px;
+    background-color: bisque; 
+    padding-top: 40px;
     padding-left: 0em;
+    line-height: .03;
    
 }
 h2 {
     color: #b65d10;
     font-family: 'Akaya Kanadaka', cursive;
     text-align: left;
-    font-size: 20px;
-    font-style: caps;
-    background-color: bisque;
-    padding-top: 1em;
+    font-size: 18px;
+    letter-spacing: 10pt;
+    font-family: Roboto, sans-serif;
     padding-left: 0em;
+    padding-bottom: 2em;
+    line-height: .01;
    
 }
 .cookie {
