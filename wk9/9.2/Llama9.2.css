@@ -4,13 +4,22 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   display: none;
 }
 .animal-container {
-  border: 1px solid #333;
+  border: 5px solid #333;
   width: 260px;
   padding: 20px;
 }
 .common-name {
   font-size: 24px;
   font-weight: 400;
+  font-style: italic;
+  margin: 0 auto 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.binomia-Name {
+  font-size: 70px;
+  font-weight: 400;
+  font-style: italic;
   margin: 0 auto 20px;
   text-align: center;
   border-bottom: 1px solid #ccc;
@@ -19,5 +28,3 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   display: block;
   width: 220px;
   margin: 10px auto;
-
-}
