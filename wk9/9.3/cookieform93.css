@@ -5,11 +5,22 @@
 
 }
 h1 {
-   /*  line-height: 100%; */
     color: #040474;
     font-family: 'Akaya Kanadaka', cursive;
-    text-align: center;
-    font-size: 70px;
+    text-align: left;
+    font-size: 40px;
+    background-color: bisque;
+    padding-top: 1em;
+    padding-left: 0em;
+   
+}
+h2 {
+    color: #b65d10;
+    font-family: 'Akaya Kanadaka', cursive;
+    text-align: left;
+    font-size: 20px;
+    font-style: caps;
+    background-color: bisque;
     padding-top: 1em;
     padding-left: 0em;
    
@@ -23,6 +34,7 @@ form {
     margin: 0 auto;
     font-size: 30px;
     color:  #040474;
+    background-color: bisque;
     border: 7px solid #040474;
 
 }
