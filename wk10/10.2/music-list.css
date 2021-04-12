@@ -1,7 +1,7 @@
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.track-wrapper{
+.track-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@ html {
     text-align: center;
     padding: 10px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: space-between;
     margin: 10px 0;
 }
