@@ -10,14 +10,14 @@
 </head>
 <body>
     <H1>Billboard Top Streaming Tracks</H1>
-    <div id="musicApp"> class="track-wrapper"
-        <streaming-track v-bind:track="song" v-for="song in tracks"></streaming-track>
+    <div id="musicApp"> 
+        <streaming-track v-bind:track="song" 
+        v-for="song in tracks"></streaming-track>
     </div>
     <script src="exercise2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.4.9/vuetify.min.js"></script>
 </body>
 </html>
-
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.4.9/vuetify.min.js"></script> -->
