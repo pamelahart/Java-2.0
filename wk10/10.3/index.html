@@ -3,17 +3,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <link rel="stylesheet" href="brewery-style.css">
     <title>Axios and Vue</title>
 </head>
 <body>
-    <h1>Axios and Vue</h1>
-    <div id="app">
-        <div v-for="breweries in breweries" :key="breweries.id">
-            <p>{{breweries.name}}</p>
-        </div>
+    <h1>Find Your Breweries</h1>
+    
+    <div class="brewery-wrapper">
+        <div id="app">
+            <div v-for="breweries in breweries" :key="breweries.id">
+                <p>{{breweries.name}},{{breweries.city}},{{breweries.state}}</p>
+            </div>
     </div>
-    <script src="node_modules/axios/dist/axios.js"></script>
-    <script src="node_modules/vue/dist/vue.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
