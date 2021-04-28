@@ -1,12 +1,8 @@
 html, body {
   margin: 0;
   padding: 10;
-  background-color: #3ddcf5;
-  //background-image: 50%;//
-}
-img {
-  width: 400px;
-  height: 600px;
+  background-color: #d7fcfc;
+
 }
 h1, p {
   text-align: center;
@@ -16,3 +12,4 @@ canvas {
   margin: 0;
 
 }
+
