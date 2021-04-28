@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 10;
+  background-color: #3ddcf5;
+  //background-image: 50%;//
+}
+img {
+  width: 400px;
+  height: 600px;
+}
+h1, p {
+  text-align: center;
+}
+canvas {
+  display: block;
+  margin: 0;
+
+}
