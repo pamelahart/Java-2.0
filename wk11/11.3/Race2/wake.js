@@ -8,8 +8,8 @@ class Wake {
     this.waveColor = 'white'; //wave color
     this.direction = direction;
     this.speed = speed;
-    this.wakeVertices = [this.x + 1500, this.y -100, //change w/ the wave
-                        this.x + 1500, this.y + 100,//change w/ the wave
+    this.wakeVertices = [this.x + 1500, this.y -500, //change w/ the wave
+                        this.x + 1500, this.y + 500,//change w/ the wave
                         this.x, this.y
                         ]
     
@@ -30,25 +30,25 @@ class Wake {
     this.waveVertices = [
                      
       
-                      this.x + 600, this.y + 900, 
+                      this.x + 600, this.y + 1100, 
                       this.x + 600, this.y + 800,
                       this.x + 600, this.y + 700,
                       this.x + 600, this.y + 600,
                       this.x + 600, this.y + 500,
-                      this.x + 600, this.y + 400,
+                      this.x + 600, this.y + 4000,
                       this.x + 600, this.y + 300,
                       this.x + 600, this.y + 200,
-                      this.x + 600, this.y + 1000,
+                      this.x + 600, this.y + 1200,
       
-                      this.x + 600, this.y - 1000,
+                      this.x + 600, this.y - 1200,
                       this.x + 600, this.y - 200,
                       this.x + 600, this.y - 300,
-                      this.x + 600, this.y - 400,
+                      this.x + 600, this.y - 4000,
                       this.x + 600, this.y - 500,
                       this.x + 600, this.y - 600,
                       this.x + 600, this.y - 700,
                       this.x + 600, this.y - 800,
-                      this.x + 600, this.y - 900,
+                      this.x + 600, this.y - 1100,
     ]
   }
 
@@ -85,7 +85,7 @@ class Wake {
     //this.y = this.y// 
     
     //updating wave locations
-    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 2){
+    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 6){
       this.waveVertices[idx] = this.waveVertices[idx] + this.speed; 
     }
    //updating wake location

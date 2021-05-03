@@ -30,7 +30,7 @@ class Wake {
     this.waveVertices = [
                      
       
-                      this.x + 600, this.y + 900, 
+                      this.x + 600, this.y + 2000, 
                       this.x + 600, this.y + 800,
                       this.x + 600, this.y + 700,
                       this.x + 600, this.y + 600,
@@ -38,17 +38,17 @@ class Wake {
                       this.x + 600, this.y + 400,
                       this.x + 600, this.y + 300,
                       this.x + 600, this.y + 200,
-                      this.x + 600, this.y + 1000,
+                      this.x + 600, this.y + 2000,
       
-                      this.x + 600, this.y - 1000,
-                      this.x + 600, this.y - 200,
+                      this.x + 600, this.y - 2000,
+                      this.x + 600, this.y - 2000,
                       this.x + 600, this.y - 300,
                       this.x + 600, this.y - 400,
                       this.x + 600, this.y - 500,
                       this.x + 600, this.y - 600,
                       this.x + 600, this.y - 700,
                       this.x + 600, this.y - 800,
-                      this.x + 600, this.y - 900,
+                      this.x + 600, this.y - 2000,
     ]
   }
 
@@ -59,7 +59,7 @@ class Wake {
      stroke(this.waveColor);
    
   //updating the Display the Waves//
-    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 2) {
+    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 4) {
       line(this.x, this.y, this.waveVertices[idx],this.waveVertices[idx + 1]);
     }
       
@@ -85,11 +85,11 @@ class Wake {
     //this.y = this.y// 
     
     //updating wave locations
-    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 2){
+    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 210){
       this.waveVertices[idx] = this.waveVertices[idx] + this.speed; 
     }
    //updating wake location
-    for (var idx = 0; idx < this.wakeVertices.length; idx = idx + 4) {
+    for (var idx = 0; idx < this.wakeVertices.length; idx = idx + 10) {
      this.wakeVertices[idx] = this.wakeVertices[idx] + this.speed; 
     }
     

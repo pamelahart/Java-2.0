@@ -1,11 +1,11 @@
 // waves//
 let dot = { x: 300, y: 0 }
-let speed1 = -2.5
+let speed1 = -3
 let leftAnchor = []
 let rightAnchor = []
 
 // boat1//
-let b1 = { x: 250, y: -10, w: 75, h: 100 }
+let b1 = { x: 250, y: -200, w: 75, h: 100 }
 let force = 3 // boat go faster
 
 //this is where the boat1 is generated//
