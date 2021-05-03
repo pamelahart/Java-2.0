@@ -1,0 +1,65 @@
+html, body {
+  margin: 0;
+  padding: 10;
+  background-color: #d7fcfc;
+  background-image: url("Waves_black.png");
+
+}
+h1, p {
+  text-align: center;
+  color: white;
+  background-color: #008CBA;
+}
+canvas {
+  display: block;
+  margin: 0;
+  width: 600;
+  height: 400;
+}
+button {
+  color: white;
+  fill: blue;
+  margin-top: 10px;
+  background-color: #231F20;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 20%; */
+  .container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
+  
+}
