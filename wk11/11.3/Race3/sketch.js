@@ -9,7 +9,7 @@ let b1 = { x: 250, y: -10, w: 75, h: 100 }
 let force = 3 // boat go faster
 
 //this is where the boat1 is generated//
-var boat1 = new Boat(620, 200, '#E60C76', 'up', speed1) 
+var boat1 = new Boat(620, 200, '#23B46B', 'up', speed1)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only 
 
 function setup() {
