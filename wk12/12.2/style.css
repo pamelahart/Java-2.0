@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 10;
+  background-color: #d7fcfc;
+  background-image: url("Waves_black.png");
+
+}
+h1, p {
+  text-align: center;
+  color: white;
+  background-color: #008CBA;
+}
+canvas {
+  display: block;
+  margin: 0;
+  width: 600;
+  height: 400;
+}
+button {
+  color: white;
+  fill: blue;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 100%;
+}

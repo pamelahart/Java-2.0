@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 10;
+  background-color: #d7fcfc;
+
+}
+h1, p {
+  text-align: center;
+}
+canvas {
+  display: block;
+  margin: 0;
+
+}
+
