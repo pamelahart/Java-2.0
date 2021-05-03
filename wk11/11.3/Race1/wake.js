@@ -38,9 +38,9 @@ class Wake {
                       this.x + 600, this.y + 400,
                       this.x + 600, this.y + 300,
                       this.x + 600, this.y + 200,
-                      this.x + 600, this.y + 1000,
+                      this.x + 600, this.y + 100,
       
-                      this.x + 600, this.y - 1000,
+                      this.x + 600, this.y - 100,
                       this.x + 600, this.y - 200,
                       this.x + 600, this.y - 300,
                       this.x + 600, this.y - 400,
