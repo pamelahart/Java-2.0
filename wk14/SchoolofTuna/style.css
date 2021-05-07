@@ -1,0 +1,38 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+ 
+  display: block;
+  position: absolute;
+  left: 115px;
+  top: 180px;
+  border:1px solid #ffffff;
+  
+}
+body, p {
+  background-color: #b0f0f7;
+  color: #092054;
+  text-align: center;
+  
+}
+
+h1 {
+  background-color: #092054;
+  text-align: center;
+  color: white;
+}
+h2 {
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}
+ul {
+  list-style-type: none;
+  display: inline;
+/* }
+background-image: url("Waves_black.png");
+  background-repeat: no-repeat;
+  background-size: 640px 640px; */
+}
