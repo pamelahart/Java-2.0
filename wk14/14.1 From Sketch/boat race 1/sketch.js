@@ -17,21 +17,21 @@ let b2 = { x: 250, y: -10, w: 75, h: 100 }
 let b3 = { x: 250, y: -10, w: 75, h: 100 }
 
 
-//this is where the PINK boat1 is generated//
-var boat1 = new Boat(620, 160, '#E60C76', 'up', speed1) 
+//this is where the boat1 is generated//
+var boat1 = new Boat(620, 200, '#E60C76', 'up', speed1) 
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only 
 
-//this is where the PURPLE boat2 is generated//
-var boat2 = new Boat(820, 380, '#B02C91', 'up', speed1)
+//this is where the boat2 is generated//
+var boat2 = new Boat(820, 100, '#B02C91', 'up', speed1)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only
 
-//this is where the GREEN boat3 is generated//
-var boat3 = new Boat(1020, 600, '#23B46B', 'up', speed1)
+//this is where the boat3 is generated//
+var boat3 = new Boat(1020, 100, '#B02C91', 'up', speed1)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only
 
 function setup() {
-    let cnv = createCanvas(1200, 800);
-    cnv.position(200, 200, 'fixed');
+    let cnv = createCanvas(600, 400);
+    cnv.position(50, 50, 'fixed');
     boat1.display();
     boat2.display();
     boat3.display();

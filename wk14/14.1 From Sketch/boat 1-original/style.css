@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  height: 400px;
+  left: 300px;
+}
+canvas {
+  display: inline;
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  border:1px solid #ffffff;
+
+}
+h1 {
+  margin: 0;
+  background-color: #092054;
+  text-align: center;
+  color: white;
+   width: 700px;
+  height: 500px;
+  left: 300px;

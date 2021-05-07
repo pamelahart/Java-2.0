@@ -30,9 +30,9 @@ class Wake {
     this.waveVertices = [
                      
       
-                      this.x + 900, this.y + 900, 
-                      this.x + 900, this.y + 800,
-                      this.x + 900, this.y + 700,
+                      this.x + 600, this.y + 900, 
+                      this.x + 600, this.y + 800,
+                      this.x + 600, this.y + 700,
                       this.x + 600, this.y + 600,
                       this.x + 600, this.y + 500,
                       this.x + 600, this.y + 400,
@@ -42,13 +42,13 @@ class Wake {
       
                       this.x + 600, this.y - 1000,
                       this.x + 600, this.y - 200,
-                      this.x + 400, this.y - 300,
-                      this.x + 400, this.y - 400,
+                      this.x + 600, this.y - 300,
+                      this.x + 600, this.y - 400,
                       this.x + 600, this.y - 500,
                       this.x + 600, this.y - 600,
-                      this.x + 900, this.y - 700,
-                      this.x + 900, this.y - 800,
-                      this.x + 900, this.y - 1000,
+                      this.x + 600, this.y - 700,
+                      this.x + 600, this.y - 800,
+                      this.x + 600, this.y - 1000,
     ]
   }
 
@@ -60,7 +60,7 @@ class Wake {
    
   //updating the Display the Waves//
     for (var idx = 0; idx < this.waveVertices.length; idx = idx + 2) {
-      line(this.x, this.y, this.waveVertices[idx],this.waveVertices[idx - 1]);
+      line(this.x, this.y, this.waveVertices[idx],this.waveVertices[idx + 1]);
     }
       
   //defines shape & color for Wake//
@@ -85,7 +85,7 @@ class Wake {
     //this.y = this.y// 
     
     //updating wave locations
-    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 30){
+    for (var idx = 0; idx < this.waveVertices.length; idx = idx + 200){
       this.waveVertices[idx] = this.waveVertices[idx] + this.speed; 
     }
    //updating wake location

@@ -20,7 +20,7 @@ class Boat {
                     ];
    
     //this is where the wake is generated//
-    this.wake = new Wake(this.wakeAnchorX, this.wakeAnchorY, this.color, this.direction, this.speed)
+    this.wake = new Wake(this.wakeAnchorX, this.wakeAnchorY, this.color,       this.direction, this.speed)
 
   }
   
@@ -40,14 +40,17 @@ class Boat {
     this.wake.display()
   }
   //updates to the location of the boat
+  
   update() {
     for (var idx = 0; idx < this.boatVertices.length; idx = idx + 2){
      this.boatVertices[idx] = this.boatVertices[idx] + this.speed;   
     }
     this.x = this.x + this.speed; 
+    //this.y = this.y // may need this later// 
     
     this.wakeAnchorX = this.wakeAnchorX + this.speed;
    
+    // this.wakeAnchorY = this.wakeAnchorY + this.speed; may need later//
     this.wake.update()
   
   }
