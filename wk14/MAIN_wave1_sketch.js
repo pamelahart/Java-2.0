@@ -5,49 +5,49 @@ var strum = 1;
 //button//
 var button;
 
-// waves//
+// wake & boat speed//
 let dot = { x: 300, y: 0 }
 let speed1 = -2.5
 let speed2 = -5
 let speed3 = -3
 let leftAnchor = []
-let rightAnchor = []
+let rightAnchor = [] 
 
-// boat1//
-let b1 = { x: 250, y: -10, w: 75, h: 100 }
+// boat1// //where do I move the boats backwards off the canvas? rrrr!!!//
+let b1 = { x: -100, y: -100, w: 750, h: 100 }
 let force = 3
 
 // boat2//
-let b2 = { x: 250, y: -10, w: 75, h: 100 }
+let b2 = { x: -100, y: -100, w: 75, h: 100 }
 
 // boat3//
-let b3 = { x: 250, y: -10, w: 75, h: 100 }
+let b3 = { x: -100, y: -100, w: 75, h: 100 }
 
 
 //this is where the PINK boat1 is generated//
-var boat1 = new Boat(620, 160, '#E60C76', 'up', speed1)
+var boat1 = new Boat(620, 100, '#E60C76', 'up', speed1)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only 
 
-//this is where the PURPLE boat2 is generated//
-var boat2 = new Boat(820, 380, '#eb8034', 'up', speed2)
+//this is where the ORANGE boat2 is generated//
+var boat2 = new Boat(820, 280, '#eb8034', 'up', speed2)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only
 
-//this is where the GREEN boat3 is generated//
-var boat3 = new Boat(1020, 600, '#7333b8', 'up', speed3)
-// UP is our boat direction & can be changed to down & is left & right, speed will be forward only
+//this is where the PURPLE boat3 is generated//
+var boat3 = new Boat(1020, 450, '#7333b8', 'up', speed3)
+// UP is our boat direction & can be changed to down & is left & right, speed will be forward only */
 
 
 //PREload music - NOT WORKING!!!//
 /* function preload() {
   soundFormats('wav');
-  mySound = loadSound('sound/TD_Pamela2.0-1.m4a'); */
+  mySound = loadSound('sound/TD_Pamela2.0-1.m4a');  */
 
 function setup() {
   createCanvas(1800, 600);
   background('#b0f0f7');
   boat1.display();
   boat2.display();
-  boat3.display();
+  boat3.display(); 
 /* 
 mySound.setVolume(0.1);
   mySound.play();
@@ -69,13 +69,7 @@ function togglePlaying() {
     button.html('play'); */
 
 }  
-// Load another JS file - BOAT RACE - NOT WORKING!! 
-/* function loadJSON(path, [callback], [errorCallback], [datatype])() {
-loadLib("toolkit/Toolkit");
-loadLib("toolkit/Viewable");
-loadLib("toolkit/Overlay");
-}
- */
+
 function draw() { 
   
   stroke('#006699');
@@ -98,12 +92,14 @@ beginShape();
   endShape(); 
 
   offset += 0.05;
+
+  //show the BOATS
   boat1.display();
   boat1.update();
   boat2.display();
   boat2.update();
   boat3.display();
-  boat3.update();
+  boat3.update(); 
 }
 //WAVE
 class Wave {
