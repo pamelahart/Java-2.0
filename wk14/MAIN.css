@@ -1,15 +1,6 @@
 html, body {
   margin: 0;
   padding: 60;
-/*   background-color: #092054; */
-/*   width: 600px;
-  height: 400px; */
-}
-ul {
-  list-style-type: none;
-/*   margin: 0;
-  padding: 30; */
-  
 }
 body, p {
   color: #ffffff;
@@ -39,13 +30,13 @@ h2 {
 
 a:hover, a:active {
   background-colo4336;
-} */
-}
+}  */
+
 button {
   color: white;
-  fill: blue;
+  fill:#006699;
   margin-top: 10px;
-  background-color: #231F20;
+  background-color: #092054;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -54,26 +45,19 @@ button {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  width: 20%; */
-  .container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-
-.container img {
-  width: 100%;
-  height: auto;
+  width: 10%; 
+  
+ 
 }
 
 .container .btn {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #f1f1f1;
-  color: black;
+  color: #006699;
   font-size: 16px;
   padding: 16px 30px;
   border: none;
@@ -81,9 +65,25 @@ button {
   border-radius: 5px;
   text-align: center;
 }
-
-.container .btn:hover {
-  background-color: black;
+/* // hovering button NOT WORKING */
+/* .container .btn:hover {
+  background-color: #006699;
   color: white;
+
 }
+  a:link, .btn:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover, .btn:active {
+  background-color: red;
+} */
+
+
+
   

@@ -5,21 +5,21 @@ var strum = 1;
 //button
 var button;
 
-function preload() {
+/* function preload() {
   soundFormats('wav');
   mySound = loadSound('RowYourBoat.mp3');
-
-}
+ */
+/* } */
 function setup() {
   createCanvas(1200, 800);
   background('#b0f0f7');
-  mySound.setVolume(0.1);
+ /*  mySound.setVolume(0.1);
   mySound.play();
-  button = createButton('PLAY')
-  button.mousePressed(togglePlaying);
+  button = createButton('PLAY');
+  button.mousePressed(togglePlaying); */
 }
 
-function loaded() {
+/* function loaded() {
 
 }
 function togglePlaying() {
@@ -32,7 +32,7 @@ function togglePlaying() {
     mySound.pause();
     button.html('play');
 
-} 
+}  */
 
 function draw() { 
   
@@ -40,6 +40,7 @@ function draw() {
   // color('#b0f0f7'); light blue
   // color('#006699'); water blue
   // color('#092054;'); dark blue
+  
   noFill();
  
   beginShape();
@@ -56,7 +57,7 @@ function draw() {
   offset += 0.05;
   
 }
-//
+//WAVE
 class Wave {
   constructor(amp, period, phase){
     this.amplitude = amp;
@@ -67,5 +68,4 @@ class Wave {
     
     return
   }
-}
 }
