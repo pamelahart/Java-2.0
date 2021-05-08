@@ -85,7 +85,7 @@ function draw() {
 
   noFill();
  
-/*   beginShape();
+beginShape();
   vertex(0, height);
   for(var x = 0; x < width; x++){
     //var angle = map(x, 0, width, 0, TWO_PI);
@@ -95,7 +95,7 @@ function draw() {
     vertex(x, y);
   }
   vertex(width, height);
-  endShape(); */
+  endShape(); 
 
   offset += 0.05;
   boat1.display();

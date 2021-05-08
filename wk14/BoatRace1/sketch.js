@@ -30,7 +30,7 @@ var boat3 = new Boat(1020, 600, '#7333b8', 'up', speed3)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only
 
 function setup() {
-    let cnv = createCanvas(1200, 800);
+    createCanvas(1800, 600);
     cnv.position(200, 200, 'fixed');
     boat1.display();
     boat2.display();
