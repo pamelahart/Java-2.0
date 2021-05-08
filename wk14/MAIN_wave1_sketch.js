@@ -2,10 +2,35 @@
 var offset = 0;
 var strum = 1;
 
-function setup() { 
-createCanvas(1200, 800);  
-background('#b0f0f7');
+//button
+var button;
 
+function preload() {
+  soundFormats('wav');
+  mySound = loadSound('RowYourBoat.mp3');
+
+}
+function setup() {
+  createCanvas(1200, 800);
+  background('#b0f0f7');
+  mySound.setVolume(0.1);
+  mySound.play();
+  button = createButton('PLAY')
+  button.mousePressed(togglePlaying);
+}
+
+function loaded() {
+
+}
+function togglePlaying() {
+  if (!mySound.isPlaying()) {
+    mySound.play();
+    mySound.setVolume(0.3);
+    button.html('pause');
+  }
+  else {
+    mySound.pause();
+    button.html('play');
 
 } 
 
@@ -43,7 +68,4 @@ class Wave {
     return
   }
 }
-let wave;
-
-
-//
+}
