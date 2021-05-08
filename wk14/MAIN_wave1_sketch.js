@@ -2,25 +2,25 @@
 var offset = 0;
 var strum = 1;
 
-//button
+//button//
 var button;
 
+//PREload music - NOT WORKING!!!//
 /* function preload() {
   soundFormats('wav');
-  mySound = loadSound('RowYourBoat.mp3');
- */
-/* } */
+  mySound = loadSound('sound/TD_Pamela2.0-1.m4a'); */
+
 function setup() {
   createCanvas(1800, 600);
   background('#b0f0f7');
-
- /*  mySound.setVolume(0.1);
+/* 
+mySound.setVolume(0.1);
   mySound.play();
   button = createButton('PLAY');
-  button.mousePressed(togglePlaying); */
+  button.mousePressed(togglePlaying); 
 }
 
-/* function loaded() {
+function loaded() {
 
 }
 function togglePlaying() {
@@ -31,12 +31,16 @@ function togglePlaying() {
   }
   else {
     mySound.pause();
-    button.html('play');
+    button.html('play'); */
 
-}  */
-// Load another JS file - BOAT RACE
-
-
+}  
+// Load another JS file - BOAT RACE - NOT WORKING!! 
+/* function loadJSON(path, [callback], [errorCallback], [datatype])() {
+loadLib("toolkit/Toolkit");
+loadLib("toolkit/Viewable");
+loadLib("toolkit/Overlay");
+}
+ */
 function draw() { 
   
   stroke('#006699');
