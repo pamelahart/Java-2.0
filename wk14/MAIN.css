@@ -1,43 +1,44 @@
 html, body {
-  margin: 0;
-  padding: 60;
+  margin: 10;
+  padding: 0;
   background-color: #051230; 
+  
 }
 body, p {
   color: #ffffff;
   text-align: center;
-  padding: 60;
+  padding: 0;
+  font-family: 'Teko light 300', sans-serif;
+  font-size: 20px;
   
 }
 h1 {
   text-align: center;
   color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
   
-}
-h2 {
-  top: 400px;
-  text-align: center;
-  color:white;
 }
 
 button {
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
   color: white;
   fill:#006699;
   margin-top: 10px;
   background-color: white;
   border: none;
   color: #092054;
-  padding: 15px 32px;
+  padding: 15px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 21px;
-  margin: 20px 10px;
+  margin: 30px 10px;
   width: 10%; 
  
 }
 
-.container .btn {
+/* .container .btn {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -46,12 +47,12 @@ button {
   background-color: #f1f1f1;
   color: #006699;
   font-size: 19px;
-  padding: 16px 30px;
+  padding: 16px 10px;
   border: none;
   cursor: pointer;
   border-radius: 25px;
-  text-align: center;
-}
+  text-align: center; */
+/* } */
 /* // hovering button !!!!! NOT WORKING */
 /* .container .btn:hover {
   background-color: #006699;

@@ -13,7 +13,7 @@ var button;
 function setup() {
   createCanvas(1800, 600);
   background('#b0f0f7');
-  
+
  /*  mySound.setVolume(0.1);
   mySound.play();
   button = createButton('PLAY');
@@ -34,6 +34,8 @@ function togglePlaying() {
     button.html('play');
 
 }  */
+// Load another JS file - BOAT RACE
+
 
 function draw() { 
   
@@ -70,3 +72,4 @@ class Wave {
     return
   }
 }
+
