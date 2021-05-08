@@ -11,7 +11,7 @@ var button;
  */
 /* } */
 function setup() {
-  createCanvas(1200, 800);
+  createCanvas(1800, 600);
   background('#b0f0f7');
  /*  mySound.setVolume(0.1);
   mySound.play();
@@ -40,7 +40,7 @@ function draw() {
   // color('#b0f0f7'); light blue
   // color('#006699'); water blue
   // color('#092054;'); dark blue
-  
+
   noFill();
  
   beginShape();
