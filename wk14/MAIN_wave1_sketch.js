@@ -2,6 +2,9 @@
 var offset = 0;
 var strum = 1;
 
+//sound//
+var mySound;
+
 //button//
 var button;
 
@@ -37,22 +40,22 @@ var boat3 = new Boat(1020, 450, '#7333b8', 'up', speed3)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only */
 
 
-//PREload music - NOT WORKING!!!//
-/* function preload() {
+//PREload music - SOUND CANCELLED OUT BOAT RACE - BUTTON NOT IN RIGHT PLACE NOT WORKING!!!//
+function preload() {
   soundFormats('wav');
-  mySound = loadSound('sound/TD_Pamela2.0-1.m4a');  */
-
+  mySound = loadSound('sound/countdown.wav');
+}
 function setup() {
   createCanvas(1800, 600);
   background('#b0f0f7');
+  mySound.setVolume(0.1);
+  mySound.play();
+  button = createButton('START');
+  button.mousePressed(togglePlaying);
   boat1.display();
   boat2.display();
   boat3.display(); 
-/* 
-mySound.setVolume(0.1);
-  mySound.play();
-  button = createButton('PLAY');
-  button.mousePressed(togglePlaying); 
+
 }
 
 function loaded() {
@@ -62,17 +65,18 @@ function togglePlaying() {
   if (!mySound.isPlaying()) {
     mySound.play();
     mySound.setVolume(0.3);
-    button.html('pause');
+    button.html('STOP');
   }
   else {
     mySound.pause();
-    button.html('play'); */
+    button.html('START'); 
 
 }  
 
 function draw() { 
   
   stroke('#006699');
+  //save these colors for drawing all the blues
   // color('#b0f0f7'); light blue
   // color('#006699'); water blue
   // color('#092054;'); dark blue
@@ -113,4 +117,4 @@ class Wave {
     return
   }
 }
-
+}
