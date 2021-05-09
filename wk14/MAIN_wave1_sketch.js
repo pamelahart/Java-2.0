@@ -16,7 +16,7 @@ let speed3 = -3
 let leftAnchor = []
 let rightAnchor = [] 
 
-// boat1// //where do I move the boats backwards off the canvas? rrrr!!!//
+// boat1//
 let b1 = { x: -100, y: -100, w: 750, h: 100 }
 let force = 3
 
@@ -40,7 +40,7 @@ var boat3 = new Boat(1020, 450, '#7333b8', 'up', speed3)
 // UP is our boat direction & can be changed to down & is left & right, speed will be forward only */
 
 //Create Game State//
-let raceState = {
+/* let raceState = {
   //0 for initializing
   //1 for push the mouseButton
   //2 end the race
@@ -53,7 +53,8 @@ let race = [
   {phase3: 'phase 1', phase2: 'phase2', phase3: 'phase 3'}
 ];
 let raceBegin = []; // wave starts moving once button is pressed
-let startGun = new StartSound // starting gun sound
+let startGun = new StartSound // starting gun sound */
+
 let button;
 
 //PREload music - SOUND CANCELLED OUT BOAT RACE - BUTTON NOT IN RIGHT PLACE NOT WORKING!!!//
@@ -64,13 +65,16 @@ function preload() {
 function setup() {
   createCanvas(1800, 600);
   background('#b0f0f7');
-  button = createButton('begin');
+
+  //BEGIN PHASE START INFO//- Need to fix all
+  //button = createButton('begin');
   //console.log(button)
-  button.position((width / 2) - (button.width/2), height /2 - (button.height /2));
-  button.mousePressed(startGun);
+  //button.position((width / 2) - (button.width/2), height /2 - (button.height /2));
+  //button.mousePressed(startGun);
+  //button = createButton('START');
+
   mySound.setVolume(0.1);
   mySound.play();
-  button = createButton('START');
   button.mousePressed(togglePlaying);
   boat1.display();
   boat2.display();
@@ -94,8 +98,9 @@ function togglePlaying() {
 }  
 
 function draw() { 
-  //adding in new sequence start//
-  if(raceState.phase > 0 && gameState.phase < 3) {
+  
+  //adding in new sequence start//NEED TO TROUBLESHOOT ALL
+ /*  if(raceState.phase > 0 && gameState.phase < 3) {
     pink.show(); //not correct name
     purple.show(); //not correct name
     start(race[raceState.currentRaceIndex].question, 0, 200, width,300) //not correct action
@@ -130,22 +135,23 @@ function draw() {
     console.log ('switch to second')
     race.State.phase = 2;
   } else if (order === 'second') {
-    quizState.currentRaceIndex++;
-    quizState.phase = 1;
+    raceState.currentRaceIndex++;
+    raceState.phase = 1;
   }
  else {
   // race is done
   raceState.phase = 3
-}
+} */
 
   stroke('#006699');
-  //save these colors for drawing all the blues
+  //SAVE these colors for drawing all the blues
   // color('#b0f0f7'); light blue
   // color('#006699'); water blue
   // color('#092054;'); dark blue
 
   noFill();
  
+  //wave//
   beginShape();
   vertex(0, height);
   for(var x = 0; x < width; x++){
@@ -168,6 +174,7 @@ function draw() {
   boat3.display();
   boat3.update(); 
 }
+
 //WAVE
 class Wave {
   constructor(amp, period, phase){
