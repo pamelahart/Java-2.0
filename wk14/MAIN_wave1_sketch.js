@@ -8,54 +8,51 @@ var mySound;
 //button//
 var button;
 
+//race state//
+var raceState = 0;
+
 // wake & boat speed//
 let dot = { x: 300, y: 0 }
-let speed1 = -2.5
-let speed2 = -5
-let speed3 = -3
+let speed1 = 2.5
+let speed2 = 5
+let speed3 = 3
 let leftAnchor = []
 let rightAnchor = [] 
 
-// boat1//
-let b1 = { x: -100, y: -100, w: 750, h: 100 }
+/* // boat1// - these can all be deleted
+let b1 = { x: -1000, y: -100, w: 750, h: 100 }
 let force = 3
 
 // boat2//
-let b2 = { x: -100, y: -100, w: 75, h: 100 }
+let b2 = { x: -1000, y: -100, w: 75, h: 100 }
 
 // boat3//
-let b3 = { x: -100, y: -100, w: 75, h: 100 }
+let b3 = { x: -1000, y: -100, w: 75, h: 100 } */
 
 
 //this is where the PINK boat1 is generated//
-var boat1 = new Boat(620, 100, '#E60C76', 'up', speed1)
-// UP is our boat direction & can be changed to down & is left & right, speed will be forward only 
+var boat1 = new Boat(0, 100, '#E60C76', 'right', speed1)
+// right is our boat direction & can be changed & forward only 
 
 //this is where the ORANGE boat2 is generated//
-var boat2 = new Boat(820, 280, '#eb8034', 'up', speed2)
-// UP is our boat direction & can be changed to down & is left & right, speed will be forward only
+var boat2 = new Boat(0, 280, '#eb8034', 'up', speed2)
+// right is our boat direction & can be changed & forward only
 
 //this is where the PURPLE boat3 is generated//
-var boat3 = new Boat(1020, 450, '#7333b8', 'up', speed3)
-// UP is our boat direction & can be changed to down & is left & right, speed will be forward only */
+var boat3 = new Boat(0, 450, '#7333b8', 'up', speed3)
+//  right is our boat direction & can be changed & forward only */
 
 //Create Game State//
 /* let raceState = {
-  //0 for initializing
-  //1 for push the mouseButton
-  //2 end the race
+  //0 no boats no music, 
+  //1 race start music begins, boats not on screen, not moving
+  //2 music done, boats get on screen & moving
   phase: 0,
   currentRaceIndex: 0 //start the race
 };
-let race = [
-  {phase1: 'phase 1', phase2: 'phase2', phase3: 'phase 3'},
-  {phase2: 'phase 2', phase2: 'phase2', phase3: 'phase 3'},
-  {phase3: 'phase 1', phase2: 'phase2', phase3: 'phase 3'}
-];
+
 let raceBegin = []; // wave starts moving once button is pressed
 let startGun = new StartSound // starting gun sound */
-
-let button;
 
 //PREload music - SOUND CANCELLED OUT BOAT RACE - BUTTON NOT IN RIGHT PLACE NOT WORKING!!!//
 function preload() {
@@ -66,83 +63,57 @@ function setup() {
   createCanvas(1800, 600);
   background('#b0f0f7');
 
-  //BEGIN PHASE START INFO//- Need to fix all
-  //button = createButton('begin');
-  //console.log(button)
-  //button.position((width / 2) - (button.width/2), height /2 - (button.height /2));
-  //button.mousePressed(startGun);
-  //button = createButton('START');
+  //BEGIN PHASE START INFO//-
+    button = createButton('START');
+   /*  console.log(button) */
+    button.position((width / 2) - (button.width/2), height /2 - (button.height /2));
+/*     button.mousePressed(startGun);  */
+    mySound.setVolume(0.1);
+    mySound.play(); 
 
-  mySound.setVolume(0.1);
-  mySound.play();
-  button.mousePressed(togglePlaying);
-  boat1.display();
-  boat2.display();
-  boat3.display(); 
+/*    button.mousePressed(togglePlaying); */
+    button.mousePressed(changeRaceState);
+    boat1.display(); 
+    boat2.display();
+    boat3.display();  
 
 }
 
 function loaded() {
 
 }
-function togglePlaying() {
-  if (!mySound.isPlaying()) {
+
+function changeRaceState() { //button can only change to 0 or 1 state or racing - add draw section the timing 1-2
+//  get current time, and then if time is past 5 seconds for state 1 to state 2//
+
+  if (raceState == 0){
+    raceState = 1; 
     mySound.play();
     mySound.setVolume(0.3);
-    button.html('STOP');
+    button.html('Restart')
   }
-  else {
-    mySound.pause();
-    button.html('START'); 
+  else if (raceState == 1){
+    raceState = 0;
+    button.html('START');
 
-}  
+    //this is redrawing for restart only//
+    boat1 = new Boat(0, 100, '#E60C76', 'right', speed1)
+    // right is our boat direction & can be changed & forward only 
+
+    //this is where the ORANGE boat2 is generated//
+    boat2 = new Boat(0, 280, '#eb8034', 'up', speed2)
+    // right is our boat direction & can be changed & forward only
+
+    //this is where the PURPLE boat3 is generated//
+    boat3 = new Boat(0, 450, '#7333b8', 'up', speed3)
+//  right is our boat direction & can be changed & forward only */
+
+    background('#b0f0f7');
+  }
+} 
 
 function draw() { 
   
-  //adding in new sequence start//NEED TO TROUBLESHOOT ALL
- /*  if(raceState.phase > 0 && gameState.phase < 3) {
-    pink.show(); //not correct name
-    purple.show(); //not correct name
-    start(race[raceState.currentRaceIndex].question, 0, 200, width,300) //not correct action
-  }
-  if(raceState.phase === 1) {
-    text(race[raceState.currentRaceIndex].first, 0, 300, width, 400) //not correct action
-  } 
-  
-  if (raceState.phase === 2) {
-    text(race[raceState.currentRaceIndex].second, 0, 300, width, 400) //not correct action
-  }
-
-  if (raceState.phase === 3) {
-    text(race[raceState.currentRaceIndex].third, 0, 300, width, 400)
-  } //not correct action
-
-  }
-  function startRace() {
-    raceState.phase1 = 1
-    button.position(-100, -100) //not correct action
-  }
-  function mousePressed() {
-    if (startRace(pink) && raceState.phase > 0) {
-      startSound(pink) //not correct action
-  }
-    if (startRace(purple) && raceState.phase > 0) {
-      startRace(purple) //not correct action
-  }
-  raceEnd.push() // do I even need this push???
-
-  if (order === "first") {
-    console.log ('switch to second')
-    race.State.phase = 2;
-  } else if (order === 'second') {
-    raceState.currentRaceIndex++;
-    raceState.phase = 1;
-  }
- else {
-  // race is done
-  raceState.phase = 3
-} */
-
   stroke('#006699');
   //SAVE these colors for drawing all the blues
   // color('#b0f0f7'); light blue
@@ -166,15 +137,19 @@ function draw() {
 
   offset += 0.05;
 
-  //show the BOATS
-  boat1.display();
-  boat1.update();
-  boat2.display();
-  boat2.update();
-  boat3.display();
-  boat3.update(); 
-}
+  if (raceState == 0) {
+    return;
+  }
+  else if (raceState == 1) { //show the BOATS when race has started//
+    boat1.display();
+    boat1.update();
+    boat2.display();
+    boat2.update();
+    boat3.display();
+    boat3.update();
+  }
 
+}
 //WAVE
 class Wave {
   constructor(amp, period, phase){
@@ -187,4 +162,4 @@ class Wave {
     return
   }
 }
-}
+
