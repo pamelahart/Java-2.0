@@ -43,6 +43,17 @@ var boat2 = new Boat(-600, 280, '#eb8034', 'up', speed2)
 var boat3 = new Boat(-600, 450, '#7333b8', 'up', speed3)
 //  right is our boat direction & can be changed & forward only */
 
+//bring in tuna
+const flock = [];
+
+let alignSlider, cohesionSlider, separationSlider;
+
+//tuna shape
+let t1 = { x: 250, y: -10, w: 75, h: 100 }
+
+//this is where the tuna is generated
+var tuna1 = new Tuna(300, 200, '#E60C76') //left off 'up' & speed
+
 //Create Race State//
 /* let raceState = {
   //0 no boats no music, 
@@ -67,6 +78,13 @@ function setup() {
   mySound2.play();
   mySound.setVolume(0.3);
   mySound2.setVolume(0.1);;
+  tuna1.display(); //shows the tuna setup
+  alignSlider = createSlider(0, 5, 1, 0.1);
+  cohesionSlider = createSlider(0, 5, 1, 0.1);
+  separationSlider = createSlider(0, 5, 1, 0.1);
+  for (let i = 0; i < 100; i++) {
+    flock.push(new Boid());
+  }
 
   //BEGIN PHASE START INFO//-
     button = createButton('START');
@@ -118,7 +136,15 @@ function changeRaceState() { //button can only change to 0 or 1 state or racing 
 } 
 
 function draw() { 
-  
+  tuna1.display(); // draws & then shows the tuna complete
+  tuna1.update();
+
+  for (let boid of flock) {
+    boid.edges();
+    boid.flock(flock);
+    boid.update();
+    boid.show();
+  }
   stroke('#006699');
   //SAVE these colors for drawing all the blues
   // color('#b0f0f7'); light blue
