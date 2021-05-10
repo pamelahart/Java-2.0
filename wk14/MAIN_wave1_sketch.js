@@ -4,6 +4,7 @@ var strum = 1;
 
 //sound//
 var mySound;
+var mySound2;
 
 //button//
 var button;
@@ -14,7 +15,7 @@ var raceState = 0;
 // wake & boat speed//
 let dot = { x: 300, y: 0 }
 let speed1 = 2.5
-let speed2 = 5
+let speed2 = 3.25
 let speed3 = 3
 let leftAnchor = []
 let rightAnchor = [] 
@@ -31,18 +32,18 @@ let b3 = { x: -1000, y: -100, w: 75, h: 100 } */
 
 
 //this is where the PINK boat1 is generated//
-var boat1 = new Boat(0, 100, '#E60C76', 'right', speed1)
+var boat1 = new Boat(-600, 100, '#E60C76', 'right', speed1)
 // right is our boat direction & can be changed & forward only 
 
 //this is where the ORANGE boat2 is generated//
-var boat2 = new Boat(0, 280, '#eb8034', 'up', speed2)
+var boat2 = new Boat(-600, 280, '#eb8034', 'up', speed2)
 // right is our boat direction & can be changed & forward only
 
 //this is where the PURPLE boat3 is generated//
-var boat3 = new Boat(0, 450, '#7333b8', 'up', speed3)
+var boat3 = new Boat(-600, 450, '#7333b8', 'up', speed3)
 //  right is our boat direction & can be changed & forward only */
 
-//Create Game State//
+//Create Race State//
 /* let raceState = {
   //0 no boats no music, 
   //1 race start music begins, boats not on screen, not moving
@@ -54,24 +55,28 @@ var boat3 = new Boat(0, 450, '#7333b8', 'up', speed3)
 let raceBegin = []; // wave starts moving once button is pressed
 let startGun = new StartSound // starting gun sound */
 
-//PREload music - SOUND CANCELLED OUT BOAT RACE - BUTTON NOT IN RIGHT PLACE NOT WORKING!!!//
+//PREload music - Start SOUND plays each time on play and restart- row your boat is continuous//
 function preload() {
   soundFormats('wav');
+  mySound2 = loadSound('sound/TDguitar_Pamela2.0.m4a');
   mySound = loadSound('sound/countdown.wav');
 }
 function setup() {
   createCanvas(1800, 600);
   background('#b0f0f7');
+  mySound2.play();
+  mySound.setVolume(0.3);
+  mySound2.setVolume(0.1);;
 
   //BEGIN PHASE START INFO//-
     button = createButton('START');
    /*  console.log(button) */
     button.position((width / 2) - (button.width/2), height /2 - (button.height /2));
-/*     button.mousePressed(startGun);  */
+/* button.mousePressed(startGun);  */
     mySound.setVolume(0.1);
     mySound.play(); 
 
-/*    button.mousePressed(togglePlaying); */
+/* button.mousePressed(togglePlaying); */
     button.mousePressed(changeRaceState);
     boat1.display(); 
     boat2.display();
@@ -97,15 +102,15 @@ function changeRaceState() { //button can only change to 0 or 1 state or racing 
     button.html('START');
 
     //this is redrawing for restart only//
-    boat1 = new Boat(0, 100, '#E60C76', 'right', speed1)
+    boat1 = new Boat(-500, 100, '#E60C76', 'right', speed1)
     // right is our boat direction & can be changed & forward only 
 
     //this is where the ORANGE boat2 is generated//
-    boat2 = new Boat(0, 280, '#eb8034', 'up', speed2)
+    boat2 = new Boat(-500, 280, '#eb8034', 'up', speed2)
     // right is our boat direction & can be changed & forward only
 
     //this is where the PURPLE boat3 is generated//
-    boat3 = new Boat(0, 450, '#7333b8', 'up', speed3)
+    boat3 = new Boat(-500, 450, '#7333b8', 'up', speed3)
 //  right is our boat direction & can be changed & forward only */
 
     background('#b0f0f7');
