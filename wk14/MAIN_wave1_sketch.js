@@ -73,7 +73,7 @@ function setup() {
   mySound2.play();
   mySound.setVolume(0.3);
   mySound2.setVolume(0.1);;
-/*   tuna1.display(); //shows the tuna setup
+/*   tuna1.display(); //shows the tuna setup- displays within canvas- needs to be on background
   alignSlider = createSlider(0, 5, 1, 0.1);
   cohesionSlider = createSlider(0, 5, 1, 0.1);
   separationSlider = createSlider(0, 5, 1, 0.1); */
@@ -85,7 +85,6 @@ function setup() {
 
   //BEGIN PHASE START INFO//-
     button = createButton('START');
-   /*  console.log(button) */
     button.position((width / 2) - (button.width/2), height /2 - (button.height /2));
 /* button.mousePressed(startGun);  */
     mySound.setVolume(0.1);
@@ -133,7 +132,7 @@ function changeRaceState() { //button can only change to 0 or 1 state or racing 
 } 
 
 function draw() { 
-  //tuna//
+  //tuna// - needs to be in background
 /*   tuna1.display(); // draws & then shows the tuna complete
   tuna1.update();
 
