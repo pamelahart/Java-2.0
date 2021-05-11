@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 300;
   background-color: #051230; 
-  
+
 }
 body, p {
   color: #ffffff;
@@ -21,22 +21,20 @@ h1 {
   
 }
 button {
-  display: 30px 400px;
+  display:list-item;
   font-family: 'Teko', sans-serif;
   font-size: 40px;
   color: white;
   fill:#006699;
-/*   margin-top: 10px; */
+  margin-left: 50px;
   background-color: white;
   border: none;
   color: #092054;
   padding: 10px 12px;
   text-align: center;
   text-decoration: none;
- /*  margin: 0px; */
   width: 7%; 
   margin-top: -30px;
- /*  display: inline-block; */
 
 }
 /* #boid-js {
