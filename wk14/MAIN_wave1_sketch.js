@@ -1,3 +1,9 @@
+//multiple canvases//
+/* var a_canvas = document.getElementById("a")
+var a_canvas = document.getElementById("b") */
+window.onload = function () {
+  var mycontext1 = document.getElementById("myCanvasTag1").getContext('2d');
+
 //wave//
 var offset = 0;
 var strum = 1;
@@ -52,7 +58,7 @@ let alignSlider, cohesionSlider, separationSlider;
 let t1 = { x: 250, y: -10, w: 75, h: 100 }
 
 //this is where the tuna is generated
-var tuna1 = new Tuna(300, 200, '#E60C76') //left off 'up' & speed
+var tuna1 = new Tuna(300, 200, '#E60C76') //
 
 //Create Race State//
 /* let raceState = {
@@ -84,6 +90,7 @@ function setup() {
   separationSlider = createSlider(0, 5, 1, 0.1);
   for (let i = 0; i < 100; i++) {
     flock.push(new Boid());
+
   }
 
   //BEGIN PHASE START INFO//-
@@ -136,6 +143,7 @@ function changeRaceState() { //button can only change to 0 or 1 state or racing 
 } 
 
 function draw() { 
+  
   tuna1.display(); // draws & then shows the tuna complete
   tuna1.update();
 
